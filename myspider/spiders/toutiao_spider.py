@@ -91,8 +91,8 @@ class ToutiaoSpider(scrapy.Spider):
                 if len(tt):
                     item['content'] += '<p>' + tt + '</p>\n'
                     #print tt
-
-        return item
+        
+        return item if len(item['content']) else None
 
     # 将unix时间戳转换为格式20170101
     def date_convert(self, from_date):
