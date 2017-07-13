@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--headTrap<body></body><head></head><html></html>--><html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+
+
+        <script nonce="" type="text/javascript">
+            window.logs = {
+                pagetime: {}
+            };
+            window.logs.pagetime['html_begin'] = (+new Date());
+        </script>
+        
+        <link rel="dns-prefetch" href="//res.wx.qq.com">
+<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
+<link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/favicon22c41b.ico">
+<script nonce="" type="text/javascript">
+    String.prototype.html = function(encode) {
+        var replace =["&#39;", "'", "&quot;", '"', "&nbsp;", " ", "&gt;", ">", "&lt;", "<", "&amp;", "&", "&yen;", "¥"];
+        if (encode) {
+            replace.reverse();
+        }
+        for (var i=0,str=this;i< replace.length;i+= 2) {
+             str=str.replace(new RegExp(replace[i],'g'),replace[i+1]);
+        }
+        return str;
+    };
+
+    window.isInWeixinApp = function() {
+        return /MicroMessenger/.test(navigator.userAgent);
+    };
+
+    window.getQueryFromURL = function(url) {
+        url = url || 'http://qq.com/s?a=b#rd'; 
+        var tmp = url.split('?'),
+            query = (tmp[1] || "").split('#')[0].split('&'),
+            params = {};
+        for (var i=0; i<query.length; i++) {
+            var arg = query[i].split('=');
+            params[arg[0]] = arg[1];
+        }
+        if (params['pass_ticket']) {
+        	params['pass_ticket'] = encodeURIComponent(params['pass_ticket'].html(false).html(false).replace(/\s/g,"+"));
+        }
+        return params;
+    };
+
+    (function() {
+	    var params = getQueryFromURL(location.href);
+        window.uin = params['uin'] || "" || '';
+        window.key = params['key'] || "" || '';
+        window.wxtoken = params['wxtoken'] || '';
+        window.pass_ticket = params['pass_ticket'] || '';
+    })();
+
+    function wx_loaderror() {
+        if (location.pathname === '/bizmall/reward') {
+            new Image().src = '/mp/jsreport?key=96&content=reward_res_load_err&r=' + Math.random();
+        }
+    }
+
+</script>
+
+        <title>乔乔多肉 </title>
+        
+<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.2.0/weui.css">  
+<link rel="stylesheet" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile34eb15.css">
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile_pc34eb15.css"> 
+<![endif]-->
+
+    </head>
+    <body id="" class="zh_CN ">
+        
+<div class="page_profile_info">
+    <div class="page_profile_info_inner">
+        <div class="profile_info_area">
+            <div class="profile_info_group">
+                <span class="radius_avatar profile_avatar">
+                                        <img src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM7qrz0aEvicjku4lOxxXtHKSmny0MSJO7kzYCVUelpFAuQ/0">
+                                    </span>
+                <div class="profile_info">
+                    <strong class="profile_nickname">
+                      乔乔多肉
+                    </strong>
+                                        <p class="profile_account">微信号: jojodr</p>
+                                    </div>
+            </div>
+            <ul class="profile_desc">
+                <li>
+                    <label class="profile_desc_label" for="">功能介绍</label>
+                    <div class="profile_desc_value" title="乔乔多肉馆为大家带来各种多肉植物，并教大家如何养殖多肉植物。">乔乔多肉馆为大家带来各种多肉植物，并教大家如何养殖多肉植物。</div>
+                </li>
+                <li>
+                    <label class="profile_desc_label" for="">帐号主体</label>
+                    <div class="profile_desc_value"><img class="icon_verify success" src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/icon_verify_success.2x2a26bd.png">重庆乔乔园艺有限公司</div>
+                </li>
+            </ul>
+            
+            <div class="profile_opr"  style="display:none">
+                            <a href="javascript:void(0);" id="copyBt" class="weui_btn weui_btn_plain_primary">复制微信号</a>
+                        </div>
+                
+        </div>
+        <div class="weui_category_title">最近10条群发</div>
+        <div class="weui_msg_card_list" id="history">  
+            
+        </div>
+        <div class="msg_card_tips">仅显示最近10条群发</div>
+
+        <div class="loadmore" style="display:none;" id="js_loading">
+            <div class="tips_wrp"><i class="icon_loading"></i><span class="tips">正在加载</span></div>
+        </div>
+        <div class="loadmore with_line" style="display:none;" id="js_nomore">
+            <div class="tips_wrp"><span class="tips">已无更多</span></div>
+        </div>
+    </div>
+    <div id="js_pc_qr_code" class="qr_code_pc_outer">
+        <div class="qr_code_pc_inner">
+            <div class="qr_code_pc">
+                <img id="js_pc_qr_code_img" class="qr_code_pc_img" src="/rr?timestamp=1499264717&amp;src=3&amp;ver=1&amp;signature=7sJOvi6y*WtR90REYC3HbXHuNPnFjv4YnvUiCp1Vteb8pbR9C8BQfAEGj-1MnSi4WZ66u42mJ-OZWnBhUs3Dk*YF9M-94rs0UIM4PQBg5NY=">
+                <p>微信扫一扫<br>关注该公众号</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+        <script nonce="">
+    var __DEBUGINFO = {
+        debug_js : "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/debug/console34c264.js",
+        safe_js : "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/safe/moonsafe34c264.js",
+        res_list: []
+    };
+</script>
+
+<script nonce="">
+(function() {
+	function _addVConsole(uri) {
+		var url = '//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/' + uri;
+		document.write('<script nonce="" type="text/javascript" src="' + url + '"><\/script>');
+	}
+	if (
+		(document.cookie && document.cookie.indexOf('vconsole_open=1') > -1)
+		|| location.href.indexOf('vconsole=1') > -1
+	) {
+		_addVConsole('2.5.1/vconsole.min.js');
+		_addVConsole('plugin/vconsole-elements/1.0.2/vconsole-elements.min.js');
+		_addVConsole('plugin/vconsole-sources/1.0.1/vconsole-sources.min.js');
+		_addVConsole('plugin/vconsole-resources/1.0.0/vconsole-resources.min.js');
+		_addVConsole('plugin/vconsole-mpopt/1.0.0/vconsole-mpopt.js');
+	}
+})();
+</script>
+        
+        <script>window.__moon_host = 'res.wx.qq.com';window.moon_map = {"biz_common/utils/respTypes.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/respTypes3518c6.js","biz_common/utils/url/parse.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/url/parse36ebcf.js","biz_common/template-2.0.1-cmd.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/template-2.0.1-cmd3518c6.js","biz_wap/jsapi/core.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/jsapi/core34c264.js","biz_common/dom/class.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/class3518c6.js","biz_common/utils/string/emoji.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/emoji3518c6.js","biz_wap/utils/ajax.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/ajax34c264.js","history/profile_history.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history.html369557.js","biz_common/utils/string/html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/html3518c6.js","history/template_helper.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/template_helper24f185.js","appmsg/cdn_img_lib.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cdn_img_lib36800f.js","biz_common/dom/event.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/event3518c6.js","history/profile_history.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history3602f0.js","sougou/profile.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/sougou/profile31dd7f.js"};</script><script type="text/javascript">window.__wxgspeeds={}; window.__wxgspeeds.moonloadtime=+new Date()</script><script  type="text/javascript" src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/moon368f86.js"></script>
+<script type="text/javascript">
+    document.domain="qq.com";
+    var biz = "MjM5NjI2NzYxNA==" || "";
+    var src = "3" ; 
+    var ver = "1" ; 
+    var timestamp = "1499264711" ; 
+    var signature = "BsSvcaGNhosecliiW5uf13yoLeyRt*rlvCckcozXPX4v-1ay99OW2AdKQ-AogmcY0WGzsGT7l5EMxkVPUwOj0A==" ; 
+    var name="jojodr"||"乔乔多肉";
+        var msgList = {"list":[{"app_msg_ext_info":{"author":"乔乔","content":"","content_url":"/s?timestamp=1499264717&amp;src=3&amp;ver=1&amp;signature=IEN4jMxv24FCsSL9ZeGPAXDbPN18opeSX1OpJpDwsJ6J0CBG2522wU1aCPFcmY3b3GznKxr-VYdbbuQu7nvV-EOtl7wNUHgZrONihQwYsUytNmfww73DHDDvDhetjuIC9Qft8xyucUfpYk1QEH14SvIgHvV4S6ETODGVduE6olg=","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/kYFWOXbnrORFwh2aqAc6GlpiaCicXNEXkZ1CHsD8Zicn35HuFO06P84FEPicKiaOpWAIPVGuAbhz7q1jnUV4cy5CYwg/0?wx_fmt=jpeg","digest":"先简单讲讲如何硬化组培12卷苗子，回头再写一篇毕竟详细得文章。1，收到苗子后，如果苗子有根，就把根修掉，留下","fileid":502131858,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"简单讲如何硬化组培苗（纯文字，慎点。）"},"comm_msg_info":{"content":"","datetime":1494266735,"fakeid":"2396267614","id":1000000065,"status":2,"type":49}},{"app_msg_ext_info":{"author":"佐藤 勉 ","content":"","content_url":"/s?timestamp=1499264717&amp;src=3&amp;ver=1&amp;signature=IEN4jMxv24FCsSL9ZeGPAXDbPN18opeSX1OpJpDwsJ6J0CBG2522wU1aCPFcmY3b3GznKxr-VYdbbuQu7nvV-OSsFu5c-3uLa9GubInlRwfduBYT0Jh7NF0VVk7GoRZ8a9rrXgWkTOq2mgLJ9ABhCm0UdFecZCmWRqSbb1wnBXE=","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/kYFWOXbnrORRxAPus3G2Dkw4r8Mv0g0tzTCp9VmKCATzzwafaEBJjGOjNeP0Dcro3fJibBPEYqdu9VoMz5m0WdQ/0?wx_fmt=jpeg","digest":"加微信：593573670。参加各种12卷苗子团购，各种铭品寿、铭品万象、铭品玉扇，老司机带大家飙车。Haw","fileid":502131848,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"Haworthia Academy Photo Album（十二卷写真集 vol.2）——玉扇"},"comm_msg_info":{"content":"","datetime":1493919624,"fakeid":"2396267614","id":1000000064,"status":2,"type":49}},{"app_msg_ext_info":{"author":"","content":"","content_url":"/s?timestamp=1499264717&amp;src=3&amp;ver=1&amp;signature=IEN4jMxv24FCsSL9ZeGPAXDbPN18opeSX1OpJpDwsJ6J0CBG2522wU1aCPFcmY3b3GznKxr-VYdbbuQu7nvV-KgYBpNv--Pwdm39VVhKjHGQmj-WxrIJa3O8HN8EPHL6rGYLBxvEbqOFn0bWKPAkrgNwcQ-JOhfyMv5OBnIwGv4=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/kYFWOXbnrORRxAPus3G2Dkw4r8Mv0g0tzTCp9VmKCATzzwafaEBJjGOjNeP0Dcro3fJibBPEYqdu9VoMz5m0WdQ/0?wx_fmt=jpeg","digest":"加微信：593573670。参加各种12卷苗子团购，各种铭品寿、铭品万象、铭品玉扇，老司机带大家飙车。ハオル","fileid":502131848,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"Haworthia Academy Photo Album（十二卷写真集 vol.2）——万象"},"comm_msg_info":{"content":"","datetime":1493828036,"fakeid":"2396267614","id":1000000063,"status":2,"type":49}},{"app_msg_ext_info":{"author":"","content":"","content_url":"/s?timestamp=1499264717&amp;src=3&amp;ver=1&amp;signature=IEN4jMxv24FCsSL9ZeGPAXDbPN18opeSX1OpJpDwsJ6J0CBG2522wU1aCPFcmY3b3GznKxr-VYdbbuQu7nvV-EEY3WJTeHvAkG6Dxre8UiS3P-a58mV4LzxlymNzvVbqzpWD5kREjJSGXUFHUdCTZ60scvchdJSOsfsnu0E1SAk=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/kYFWOXbnrORRxAPus3G2Dkw4r8Mv0g0tzTCp9VmKCATzzwafaEBJjGOjNeP0Dcro3fJibBPEYqdu9VoMz5m0WdQ/0?wx_fmt=jpeg","digest":"加微信：593573670。参加各种12卷苗子团购，各种铭品寿、铭品万象、铭品玉扇，老司机带大家飙车。ハオル","fileid":502131848,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"Haworthia Academy Photo Album（十二卷写真集 vol.2）——原始种寿"},"comm_msg_info":{"content":"","datetime":1493778670,"fakeid":"2396267614","id":1000000062,"status":2,"type":49}},{"app_msg_ext_info":{"author":"岩鸣","content":"","content_url":"/s?timestamp=1499264717&amp;src=3&amp;ver=1&amp;signature=IEN4jMxv24FCsSL9ZeGPAXDbPN18opeSX1OpJpDwsJ6J0CBG2522wU1aCPFcmY3b3GznKxr-VYdbbuQu7nvV-GjjrAQfs*cRfUYj5FP0pqRQz9BYfzms4B249KUWW-AZEpp*87ROnio6vu7kslhqPKewpUNljO8FxDbtq4EiUCI=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/kYFWOXbnrOT57193xqWC6TW0zspNiaONnS2CwDswH6kIV5UucgibicWjzK1vo7eIVXloGs0AGxyDYPaNX6Ooc6FSg/0?wx_fmt=jpeg","digest":"这些是参考《十二卷研究》杂志和一些相关资料整理出来的，并不全，比如花菱、无限、Z1等都没放进去（没查到出品人","fileid":502131703,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"http://www.xianzhenyuan.cn/forum.php?mod=viewthread&amp;tid=40618","subtype":9,"title":"万象图鉴"},"comm_msg_info":{"content":"","datetime":1493390534,"fakeid":"2396267614","id":1000000061,"status":2,"type":49}},{"app_msg_ext_info":{"author":"Marx.gerhard","content":"","content_url":"/s?timestamp=1499264717&amp;src=3&amp;ver=1&amp;signature=IEN4jMxv24FCsSL9ZeGPAXDbPN18opeSX1OpJpDwsJ6J0CBG2522wU1aCPFcmY3b3GznKxr-VYdbbuQu7nvV-N4sQhg2SQ0ng7baSCaxOgzKj1A5ArX-3z97sAvFf3rGDjva4mPnqsug2JNF1sY9f6cuZIJjYoAdGLVfu5Sl4H4=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/kYFWOXbnrOQHsvz6HSOgolbchz7QMLYzvd5OaicmvSLGdkibd32VBSWbAuXdUHsIribxIEx5IicXia4Gic4zgic218JNg/0?wx_fmt=jpeg","digest":"众筹镜姬实生寿什么是杂草？没被发现的植物就是杂草…… ——拉尔夫 沃尔多 爱默森 对于那些醉心于瓦苇植物杂交","fileid":502131667,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"“高贵的品种”还是稀少的杂草？"},"comm_msg_info":{"content":"","datetime":1493005583,"fakeid":"2396267614","id":1000000060,"status":2,"type":49}},{"app_msg_ext_info":{"author":"乔乔","content":"","content_url":"/s?timestamp=1499264717&amp;src=3&amp;ver=1&amp;signature=IEN4jMxv24FCsSL9ZeGPAXDbPN18opeSX1OpJpDwsJ6J0CBG2522wU1aCPFcmY3b3GznKxr-VYdbbuQu7nvV-BzaTVTggZ0AKzAPe*U7tyNTZIexqhp3ZijHjuVRK-B3aIYiBzoTB8NEDqoUutWQskgyOEcoVec5P8FgUy8qI9Q=","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/kYFWOXbnrOQREOfQAr1hicuYNAholibFuArvcuQKejGBjjlpvS4G6HrUG1eGia175zTKLruU6BU4Vbg5qmzqvhHSg/0?wx_fmt=jpeg","digest":"镜姬白寡妇这是我去年年底从日本购买的一个实生寿，因为过了也有些时间了，没有记住它的父母本。也问了一些朋友，说","fileid":502131640,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"众筹镜姬实生寿"},"comm_msg_info":{"content":"","datetime":1492913570,"fakeid":"2396267614","id":1000000059,"status":2,"type":49}},{"app_msg_ext_info":{"author":"charryheo","content":"","content_url":"/s?timestamp=1499264717&amp;src=3&amp;ver=1&amp;signature=IEN4jMxv24FCsSL9ZeGPAXDbPN18opeSX1OpJpDwsJ6J0CBG2522wU1aCPFcmY3b3GznKxr-VYdbbuQu7nvV-EO*oCM7bHKNKhlIpfRjhCAjfMfI*kNfwL0QGs3zYirzrtrK1*oMZ1C8Fimkt11H3KdxZFigA1o6rr*KOB3EItU=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/kYFWOXbnrOQREOfQAr1hicuYNAholibFuARiac2grN9H3JFcibPZbxgMdTTOjkmS0nLdVsbtOrGDPZY0U6SyxKt7Xg/0?wx_fmt=jpeg","digest":"最近这一年来，在多肉十二卷的小圈子里，实生和组培之争成为了一个非常热门的话题，不少的十二卷爱好者纷纷加入到了","fileid":502131636,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"http://www.xianzhenyuan.cn/thread-1286925-1-1.html","subtype":9,"title":"关于十二卷实生和组培的概念"},"comm_msg_info":{"content":"","datetime":1492827920,"fakeid":"2396267614","id":1000000058,"status":2,"type":49}},{"app_msg_ext_info":{"author":"姜烽廖","content":"","content_url":"/s?timestamp=1499264717&amp;src=3&amp;ver=1&amp;signature=IEN4jMxv24FCsSL9ZeGPAXDbPN18opeSX1OpJpDwsJ6J0CBG2522wU1aCPFcmY3b3GznKxr-VYdbbuQu7nvV-NxCfSLoCdwivhWEps*ZLj1*ILzx2jxmL4HZh5OMMYUiL6yDsEoOb94Gb2N1Z-y07UyJIyJdsoxxsWdLxIhdz2k=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/kYFWOXbnrOQx3XzsQqQxQVjRXxpR9B4sLs5E3vb5LF4N790J9lFibMydichW3CcwpkyFRK8VQ7sqgEO9C1J9ibI3A/0?wx_fmt=jpeg","digest":"五、种植介质的选择及其应用种植介质，指的是盆花根系生长的媒介，主要功能是固定植物，提供养分。这个媒介不单单是","fileid":502131629,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"南非多肉植物的家庭栽培（二）"},"comm_msg_info":{"content":"","datetime":1492041578,"fakeid":"2396267614","id":1000000057,"status":2,"type":49}},{"app_msg_ext_info":{"author":"姜烽廖","content":"","content_url":"/s?timestamp=1499264717&amp;src=3&amp;ver=1&amp;signature=IEN4jMxv24FCsSL9ZeGPAXDbPN18opeSX1OpJpDwsJ6J0CBG2522wU1aCPFcmY3b3GznKxr-VYdbbuQu7nvV-AJGd6rGw5d009iZ4QFFivPuD2O9rQF6GlxILR5QF2WvKRvDIGp3AeCsLvEHrHP6DmYIrpE2D2Cy4GPiuUfnIBw=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/kYFWOXbnrOQyhicicO7oGuZDCfLyKv0q3wZfGN7nuUdFTX9BkYbanW2ZpNaTzaagGxozc1cazguXKlG3SxDaGibRw/0?wx_fmt=jpeg","digest":"引言：       对于多肉植物的栽培，从头到尾经历了不过3年。承蒙各位花友的教诲，在这3年里让老姜略微积累","fileid":502131613,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"南非多肉植物的家庭栽培（一）"},"comm_msg_info":{"content":"","datetime":1492011712,"fakeid":"2396267614","id":1000000056,"status":2,"type":49}}]};
+        seajs.use("sougou/profile.js");
+</script>
+
+    </body>
+    <script nonce="" type="text/javascript">document.addEventListener("touchstart", function() {},false);</script>
+</html>
+<!--tailTrap<body></body><head></head><html></html>-->

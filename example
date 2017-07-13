@@ -1,0 +1,2 @@
+scrapy crawl weixin -a date=20170613 -o result/weixin/items.json -t json
+scrapy crawl toutiao -a date=20170601 -o result/toutiao/items.json -t json
