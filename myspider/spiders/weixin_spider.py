@@ -55,7 +55,11 @@ class WeixinSpider(scrapy.Spider):
             text = sel[3]
 
             pattern = re.compile(ur"var msgList = {(?P<json>.*)}")
-            content = '{' + pattern.search(text).group('json') + '}'
+            try:
+                content = '{' + pattern.search(text).group('json') + '}'
+            except AttributeError:
+                input("请复制以上链接，手动输入验证码后按1: ")
+                return
             c_json = json.loads(content)
             for item in c_json['list']:
                 time = self.date_convert(item['comm_msg_info']['datetime'])
@@ -83,8 +87,8 @@ class WeixinSpider(scrapy.Spider):
                             yield request
         
     def parse_item(self, response):
-        with open('./out/html/%s.html' % response.meta['title'], 'w') as fp:
-            fp.write(response.body)
+        #with open('./out/html/%s.html' % response.meta['title'], 'w') as fp:
+        #    fp.write(response.body)
 
         imgtemplate = '<img src="{src}">'
         item = WeixinItem()
@@ -108,7 +112,7 @@ class WeixinSpider(scrapy.Spider):
                     item['content'] += '<p>' + tt + '</p>\n'
                     #print tt
 
-        return item
+        return item if len(item['content']) else None
 
     # 将unix时间戳转换为格式20170101
     def date_convert(self, from_date):

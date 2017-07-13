@@ -1,19 +1,18 @@
 #/bin/sh
-python_env='/home/wcy/env/bin/activate'
-dir='/home/wcy/myspider'
+python='/usr/local/bin/python'
+dir='/Users/wuchengyi/Code/myspider'
 
 if [ $# -eq 1 ];then
-    date=`date -d "$1" +%Y%m%d`
+    date=$1
 elif [ $# -eq 0 ];then
-    date=`date -d '-1 day' +%Y%m%d`
+    date=$(date -v -1d '+%Y%m%d')
 else
     echo '[ERROR] Wrong params number!'
-    echo '[USAGE] $0 date'
+    echo '[USAGE] $0 20170101'
     exit
 fi
 
 echo $date
 
-source $python_env
 cd $dir
 scrapy crawl weixin -a date=$date -o $dir/result/weixin/$date.json -t json
