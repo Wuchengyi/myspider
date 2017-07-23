@@ -61,12 +61,10 @@ class WeixinSpider(scrapy.Spider):
                 input("请复制以上链接，手动输入验证码后按1: ")
 
                 tag = response.meta['tag']
-                request = scrapy.Request(url=self.urltemplate.format(query=urllib.quote(self.urls[tag][1])), callback=self.parse)
+                request = scrapy.Request(url=self.urltemplate.format(query=urllib.quote(self.urls[tag][1])), callback=self.parse, dont_filter=True)
                 request.meta['tag'] = tag
                 request.meta['desc'] = self.urls[tag][0]
                 request.meta['step'] = 1
-                print self.urltemplate.format(query=urllib.quote(self.urls[tag][1]))
-                print request.meta
                 yield request
             c_json = json.loads(content)
             for item in c_json['list']:
