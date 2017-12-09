@@ -51,8 +51,9 @@ class WeixinSpider(scrapy.Spider):
             with open('./out/list/%s.html' % response.meta['tag'], 'w') as fp:
                 fp.write(response.body)
 
-            sel = Selector(text=response.body).xpath('//script[@type]/text()').extract()
-            text = sel[3]
+            #sel = Selector(text=response.body).xpath('//script[@type]/text()').extract()
+            #text = sel[3]
+            text = response.body
 
             pattern = re.compile(ur"var msgList = {(?P<json>.*)}")
             try:

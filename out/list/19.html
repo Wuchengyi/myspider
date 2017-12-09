@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--headTrap<body></body><head></head><html></html>--><html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+
+
+        <script nonce="" type="text/javascript">
+            window.logs = {
+                pagetime: {}
+            };
+            window.logs.pagetime['html_begin'] = (+new Date());
+        </script>
+        
+        <link rel="dns-prefetch" href="//res.wx.qq.com">
+<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
+<link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/favicon22c41b.ico">
+<script nonce="" type="text/javascript">
+    String.prototype.html = function(encode) {
+        var replace =["&#39;", "'", "&quot;", '"', "&nbsp;", " ", "&gt;", ">", "&lt;", "<", "&amp;", "&", "&yen;", "¥"];
+        if (encode) {
+            replace.reverse();
+        }
+        for (var i=0,str=this;i< replace.length;i+= 2) {
+             str=str.replace(new RegExp(replace[i],'g'),replace[i+1]);
+        }
+        return str;
+    };
+
+    window.isInWeixinApp = function() {
+        return /MicroMessenger/.test(navigator.userAgent);
+    };
+
+    window.getQueryFromURL = function(url) {
+        url = url || 'http://qq.com/s?a=b#rd'; 
+        var tmp = url.split('?'),
+            query = (tmp[1] || "").split('#')[0].split('&'),
+            params = {};
+        for (var i=0; i<query.length; i++) {
+            var arg = query[i].split('=');
+            params[arg[0]] = arg[1];
+        }
+        if (params['pass_ticket']) {
+        	params['pass_ticket'] = encodeURIComponent(params['pass_ticket'].html(false).html(false).replace(/\s/g,"+"));
+        }
+        return params;
+    };
+
+    (function() {
+	    var params = getQueryFromURL(location.href);
+        window.uin = params['uin'] || "" || '';
+        window.key = params['key'] || "" || '';
+        window.wxtoken = params['wxtoken'] || '';
+        window.pass_ticket = params['pass_ticket'] || '';
+        window.appmsg_token = "";
+    })();
+
+    function wx_loaderror() {
+        if (location.pathname === '/bizmall/reward') {
+            new Image().src = '/mp/jsreport?key=96&content=reward_res_load_err&r=' + Math.random();
+        }
+    }
+
+</script>
+
+        <title>予植手礼 </title>
+        
+<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.2.0/weui.css">  
+<link rel="stylesheet" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile3944ad.css">
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile_pc34eb15.css"> 
+<![endif]-->
+
+    </head>
+    <body id="" class="zh_CN ">
+        
+<div class="page_profile_info">
+    <div class="page_profile_info_inner">
+        <div class="profile_info_area">
+            <div class="profile_info_group">
+                <span class="radius_avatar profile_avatar">
+                                        <img src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM4a9iaR9qvEEicychY963phP8PdB0gc1RlsgXCPv4NtokHQ/0">
+                                    </span>
+                <div class="profile_info">
+                    <strong class="profile_nickname">
+                      予植手礼
+                    </strong>
+                                        <p class="profile_account">微信号: fzduoroujiang</p>
+                                    </div>
+            </div>
+            <ul class="profile_desc">
+                <li>
+                    <label class="profile_desc_label" for="">功能介绍</label>
+                    <div class="profile_desc_value" title="多肉植物伴手礼专供">多肉植物伴手礼专供</div>
+                </li>
+                <li>
+                    <label class="profile_desc_label" for="">帐号主体</label>
+                    <div class="profile_desc_value"><img class="icon_verify success" src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/icon_verify_success.2x2a26bd.png">福州市仓山区多肉匠花卉有限公司</div>
+                </li>
+            </ul>
+            
+            <div class="profile_opr"  style="display:none">
+                            <a href="javascript:void(0);" id="copyBt" class="weui_btn weui_btn_plain_primary">复制微信号</a>
+                        </div>
+                
+        </div>
+        <div class="weui_category_title">最近10条群发</div>
+        <div class="weui_msg_card_list" id="history">  
+            
+        </div>
+        <div class="msg_card_tips">仅显示最近10条群发</div>
+
+        <div class="loadmore" style="display:none;" id="js_loading">
+            <div class="tips_wrp"><i class="icon_loading"></i><span class="tips">正在加载</span></div>
+        </div>
+        <div class="loadmore with_line" style="display:none;" id="js_nomore">
+            <div class="tips_wrp"><span class="tips">已无更多</span></div>
+        </div>
+    </div>
+    <div id="js_pc_qr_code" class="qr_code_pc_outer">
+        <div class="qr_code_pc_inner">
+            <div class="qr_code_pc">
+                <img id="js_pc_qr_code_img" class="qr_code_pc_img" src="/rr?timestamp=1512806935&amp;src=3&amp;ver=1&amp;signature=PBhzFsDeTuKaac3Vodiq-HRYiHqC6JYCmLenRa4*p6n9f7MWctD2QcXj-Vd0pEaLmsw0Y63kmddCaTbWDMoHAMd2jMEt6ovp3SR8t2MEtWw=">
+                <p>微信扫一扫<br>关注该公众号</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+        <script nonce="">
+    var __DEBUGINFO = {
+        debug_js : "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/debug/console34c264.js",
+        safe_js : "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/safe/moonsafe34c264.js",
+        res_list: []
+    };
+</script>
+
+<script nonce="" type="text/javascript">
+(function() {
+	var totalCount = 0,
+			finishCount = 0;
+
+	function _loadVConsolePlugin() {
+		window.vConsole = new window.VConsole();
+		while (window.vConsolePlugins.length > 0) {
+			var p = window.vConsolePlugins.shift();
+			window.vConsole.addPlugin(p);
+		}
+	}
+	
+	function _addVConsole(uri, cb) {
+		totalCount++;
+		var url = '//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/' + uri;
+		var node = document.createElement('SCRIPT');
+		node.type = 'text/javascript';
+		node.src = url;
+		node.setAttribute('nonce', '');
+		if (cb) {
+			node.onload = cb;
+		}
+		document.getElementsByTagName('head')[0].appendChild(node);
+	}
+	if (
+		(document.cookie && document.cookie.indexOf('vconsole_open=1') > -1)
+		|| location.href.indexOf('vconsole=1') > -1
+	) {
+		window.vConsolePlugins = [];
+		_addVConsole('3.0.0/vconsole.min.js', function() {
+			
+			_addVConsole('plugin/vconsole-mpopt/1.0.1/vconsole-mpopt.js', _loadVConsolePlugin);
+		});
+	}
+})();
+</script>
+        
+        <script>window.__moon_host = 'res.wx.qq.com';window.moon_map = {"biz_common/utils/respTypes.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/respTypes3518c6.js","biz_common/utils/url/parse.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/url/parse36ebcf.js","biz_common/template-2.0.1-cmd.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/template-2.0.1-cmd3518c6.js","biz_wap/jsapi/core.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/jsapi/core34c264.js","biz_common/dom/class.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/class3518c6.js","biz_common/utils/string/emoji.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/emoji3518c6.js","biz_wap/utils/ajax.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/ajax38c31a.js","history/profile_history.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history.html3944ad.js","biz_common/utils/string/html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/html3518c6.js","history/template_helper.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/template_helper24f185.js","appmsg/cdn_img_lib.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cdn_img_lib38b7bb.js","biz_common/dom/event.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/event3a25e9.js","history/profile_history.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history3602f0.js","sougou/profile.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/sougou/profile31dd7f.js"};</script><script type="text/javascript">window.__wxgspeeds={}; window.__wxgspeeds.moonloadtime=+new Date()</script><script  type="text/javascript" src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/moon368f86.js"></script>
+<script type="text/javascript">
+    document.domain="qq.com";
+    var biz = "MjM5MzEwMjIyNQ==" || "";
+    var src = "3" ; 
+    var ver = "1" ; 
+    var timestamp = "1512806913" ; 
+    var signature = "QiBWBWUjm31inXig35ljO2duq3fO*3zbz1oK2hvIxLMPl1AYAKwQ5a1U2jKV4pxsxMMSgl2JwRgaTedU1ecqAQ==" ; 
+    var name="fzduoroujiang"||"予植手礼";
+        var msgList = {"list":[{"app_msg_ext_info":{"author":"原多肉匠已更名为","content":"","content_url":"/s?timestamp=1512806935&amp;src=3&amp;ver=1&amp;signature=gfr-irjW9Bm8hKxUvtwaSRh5RMkG1Ltzh61TnAVGZKu0oZFANs46aUnO42IBZ1e*76HOmtuJYZGO6W7gEK1n9A-bfznM-D1GpytV7EWY8fuAWII6TXMU55ErjNr84JAmHMtNBWjTewHp9UT3ERcS0Mv7ONZwbKecA5BeerUtCsA=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Iib9270wYveN1VI0P40CJeTjUoN44bu3j9GhrDpoPDQq5hRaiapbIojguCAicnQbnYJHaTQxvicXkJ7hmQibaBoEiatA/0?wx_fmt=jpeg","del_flag":1,"digest":"谈恋爱的时候，我老婆在我心中是一个傻白甜，单纯天真又美好。说话细声细语，就是&quot;你怎么可以吃兔兔&quot;那种……","fileid":502087722,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"今天来吐槽一下我们的另一半"},"comm_msg_info":{"content":"","datetime":1502716184,"fakeid":"2393102225","id":1000000004,"status":2,"type":49}},{"app_msg_ext_info":{"author":"原多肉匠已更名为","content":"","content_url":"/s?timestamp=1512806935&amp;src=3&amp;ver=1&amp;signature=gfr-irjW9Bm8hKxUvtwaSRh5RMkG1Ltzh61TnAVGZKu0oZFANs46aUnO42IBZ1e*76HOmtuJYZGO6W7gEK1n9OXvT6kn*DUiFsaO3*QPp2wxPn1v7vjOGrgrz4xEd5Wq8k2VRWMmGtp2vqQSNSrOiaLi6UlCKovffwAgKZuo1R8=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Iib9270wYveOh2wgAzicEDJqFoQzcr6jicsTBoXNJ4HiadOR131Ffefzt1BoibaVE9G7lnE5PMGxicIAbSRtJvIskWeQ/0?wx_fmt=jpeg","del_flag":1,"digest":"为什么？\n因为大多数人的爱情到最后总是会消散的，\n但我们不是大多数……","fileid":502087697,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"http://weibo.com/342012616?refer_flag=1001030101_&amp;is_hot=1#1502463606073","subtype":9,"title":"请你不要只嫁给爱情。"},"comm_msg_info":{"content":"","datetime":1502466313,"fakeid":"2393102225","id":1000000003,"status":2,"type":49}},{"app_msg_ext_info":{"author":"","content":"","content_url":"/s?timestamp=1512806935&amp;src=3&amp;ver=1&amp;signature=gfr-irjW9Bm8hKxUvtwaSRh5RMkG1Ltzh61TnAVGZKu0oZFANs46aUnO42IBZ1e*76HOmtuJYZGO6W7gEK1n9OQLe0JLJ6zKeAbyqQQEE1JB5TRHNlSGiA*c55bdb2pEcXcf1n6bXxzcOYd3NqZEPQ6eqGq9VSd1XYmcB3D8eWM=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz/Iib9270wYveOKrRtonZXJujCGLbAL1f30txQibemDIgyxL74PLeqIRu3MBLiaMDPWfNGDtGwbQKLMCMTxr3p83SHQ/0?wx_fmt=jpeg","del_flag":1,"digest":"看起来白领一族正过着世界上最无趣的日子，虽然人人都有自己的小窝，但清醒时候的世界也只不过一张办公桌……","fileid":502087654,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"办公桌花艺，就算加班也要像个大艺术家"},"comm_msg_info":{"content":"","datetime":1467203145,"fakeid":"2393102225","id":1000000001,"status":2,"type":49}},{"app_msg_ext_info":{"author":"☞☞☞","content":"","content_url":"/s?timestamp=1512806935&amp;src=3&amp;ver=1&amp;signature=gfr-irjW9Bm8hKxUvtwaSRh5RMkG1Ltzh61TnAVGZKu0oZFANs46aUnO42IBZ1e*76HOmtuJYZGO6W7gEK1n9BsB2C25MQxcqjIOlxo-xemGMd6nNvlWMsZWQ9g7oi-QhYmzZmt0fLeV5Lk-uAWv9dQSxNv8x5OBSPDnhmP4WgI=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz/Iib9270wYveORX2kU4HHIISic17qFIoFT3yJUGD39jFKn1IQhpf1oIaQ2cpkHMT1Whc9gA0nrlDI1ZgYQib5N9aNA/0?wx_fmt=jpeg","del_flag":1,"digest":"在西方国家，用多肉植物来装饰点缀婚礼可谓十分流行。将最质朴的多肉元素融入婚礼中，充满生命力，寓意深远而美好。虽然……","fileid":502087642,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"来一场浪漫的多肉婚礼？说得容易！"},"comm_msg_info":{"content":"","datetime":1464268446,"fakeid":"2393102225","id":405656057,"status":2,"type":49}},{"app_msg_ext_info":{"author":"☞☞☞","content":"","content_url":"/s?timestamp=1512806935&amp;src=3&amp;ver=1&amp;signature=gfr-irjW9Bm8hKxUvtwaSRh5RMkG1Ltzh61TnAVGZKu0oZFANs46aUnO42IBZ1e*76HOmtuJYZGO6W7gEK1n9JH1zJsTFcA*63S9UHdllvnnVqhJqaaATsAh3NtOaY5cZsAEq3mIS0dr*vkTe3C0KGiCvpVJsrOljofT5zKROjI=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz/Iib9270wYveMLnlR2ah2xQCWO2B15a9oEZfglzPiaaYDorPnoI8KVCDPZySyenR1e9qISkVAWvWTD6hedkXMR8og/0?wx_fmt=jpeg","del_flag":1,"digest":"“士兵不可以没有战斗武器，\n因此作为园丁也不能没有像样的工具。”","fileid":502087592,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"花艺师与农民之间只差了这几样工具的距离"},"comm_msg_info":{"content":"","datetime":1463058952,"fakeid":"2393102225","id":405486647,"status":2,"type":49}},{"app_msg_ext_info":{"author":"多肉匠","content":"","content_url":"/s?timestamp=1512806935&amp;src=3&amp;ver=1&amp;signature=gfr-irjW9Bm8hKxUvtwaSRh5RMkG1Ltzh61TnAVGZKu0oZFANs46aUnO42IBZ1e*76HOmtuJYZGO6W7gEK1n9KQV-h1QO*CbN8WW8nDsIxQ6QGg5xWIEhsm*mfCBHNLa37ASZMn4lnzdEcjKUn8Zk2ekXXl*SojLmC1o1LtB8GA=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz/Iib9270wYveMicEHVPAc61eMBv3FYWBnice9mSRguYCxgU1ULiclxAF6quxXaSD1GQ9bmzPdYS7BYUlxsx0jpXw3vA/0?wx_fmt=jpeg","del_flag":1,"digest":"《多肉匠私家秘诀》终于上市了！历时一年，经历四季变换，无数次想要放弃。最后都被编辑暴打拖回来继续写，虽然不是多么屌爆的书","fileid":401112464,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"http://weidian.com/item.html?itemID=1707985045","subtype":9,"title":"一本书，成为多肉匠"},"comm_msg_info":{"content":"","datetime":1452084966,"fakeid":"2393102225","id":401160729,"status":2,"type":49}},{"app_msg_ext_info":{"author":"","content":"","content_url":"/s?timestamp=1512806935&amp;src=3&amp;ver=1&amp;signature=gfr-irjW9Bm8hKxUvtwaSRh5RMkG1Ltzh61TnAVGZKu0oZFANs46aUnO42IBZ1e*76HOmtuJYZGO6W7gEK1n9P3owD*YndtRI0H5EXvDDCrjoQIAq5pK9BTv*-VNI0Oh79JpAVSAndpgxZ8xoX9IU16gDtWnWhC-gzLNR0DMa0o=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz/Iib9270wYveNvYr55brDQibmDMZaLr0RsYPxK0vex2UUSPXg4Nibj0uhoptcdjl56aBpWZmrLeE54ElwibFicmhyia4w/0?wx_fmt=jpeg","del_flag":1,"digest":"更重要的是气质满分还省钱……","fileid":400850128,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"DIY | 只要几步，随便画画就很艺术！"},"comm_msg_info":{"content":"","datetime":1450183257,"fakeid":"2393102225","id":400851435,"status":2,"type":49}},{"app_msg_ext_info":{"author":"多肉匠","content":"","content_url":"/s?timestamp=1512806935&amp;src=3&amp;ver=1&amp;signature=gfr-irjW9Bm8hKxUvtwaSRh5RMkG1Ltzh61TnAVGZKu0oZFANs46aUnO42IBZ1e*76HOmtuJYZGO6W7gEK1n9GkMb*L6-TiZLXCWw4FHm0oYg8S41-aQyU7bRMAtqE9A1HvqBDz6rL3b3Ibs-Ef37lGeUPR22fENeEh8HSpbtso=","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz/Iib9270wYvePC88GVqjlbPyibJDJHkSVLOic2lEvZFuMoWGibWjxGSKHRqEMNBtop8Pr0wp7HbIeRUrQy8G0ibsVCwg/0?wx_fmt=jpeg","del_flag":1,"digest":"我们没有喝过最烈的酒，但是坚持了最想坚持的梦想……","fileid":208737717,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"这是我们的故事，可能曾经也是你的梦想"},"comm_msg_info":{"content":"","datetime":1448196379,"fakeid":"2393102225","id":400539012,"status":2,"type":49}},{"app_msg_ext_info":{"author":"","content":"","content_url":"/s?timestamp=1512806935&amp;src=3&amp;ver=1&amp;signature=gfr-irjW9Bm8hKxUvtwaSRh5RMkG1Ltzh61TnAVGZKu0oZFANs46aUnO42IBZ1e*76HOmtuJYZGO6W7gEK1n9JtJCgxPuoLwXkZYO3Iz7lna24VYuZSBV6*z98LfIgbwGLEOzno0NW-Bh-F*QnhT4QOut79eOyCGwKzrTn7TC5U=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz/Iib9270wYveNkE6YRlxhwxLxG2YkicPebldKNiaTIxG2iaWBQq0Hibiboc7SuxU1Qg56XLSgJhH0ax1v1ZYPSJmGsorw/0?wx_fmt=jpeg","del_flag":1,"digest":"2013年圣诞节，小伙伴们商量着如何迎接圣诞节。当时工作室刚成立1年多，每天接待来自各处的花友。闲来无事的时","fileid":400459085,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"史上最强圣诞礼物....."},"comm_msg_info":{"content":"","datetime":1447689622,"fakeid":"2393102225","id":400459680,"status":2,"type":49}},{"app_msg_ext_info":{"author":"","content":"","content_url":"/s?timestamp=1512806935&amp;src=3&amp;ver=1&amp;signature=gfr-irjW9Bm8hKxUvtwaSRh5RMkG1Ltzh61TnAVGZKu0oZFANs46aUnO42IBZ1e*76HOmtuJYZGO6W7gEK1n9F4EAmpqXSFapSkSFOpKdwgqmFMku3hXTs-ATLQYkOcS6IcgQmFlCsSoEW1xVaPmmtVR*z-Wu8vmERshb6KDN7s=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz/Iib9270wYveOL2ovJHK4VICzz4vXHjVt6Iuxr1hlC2pMwoTDibmoohSibMRMhSk4a6sdmkPIzVRGx4FlFrXL49H7g/0?wx_fmt=jpeg","del_flag":1,"digest":"说好的一周更新一篇的。结果相隔了将近一个月才更新。主要是娶老婆去了，婚礼结束之后。这个为了更新微信朋友圈快掉","fileid":400347339,"is_multi":0,"multi_app_msg_item_list":[],"source_url":"","subtype":9,"title":"养多肉，你会浇水吗？"},"comm_msg_info":{"content":"","datetime":1446991347,"fakeid":"2393102225","id":400352048,"status":2,"type":49}}]};
+        seajs.use("sougou/profile.js");
+</script>
+
+    </body>
+    <script nonce="" type="text/javascript">document.addEventListener("touchstart", function() {},false);</script>
+</html>
+<!--tailTrap<body></body><head></head><html></html>-->
